@@ -44,27 +44,27 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/80 dark:bg-[#0F1724]/80 backdrop-blur-md shadow-lg border-b border-[#0F1724]/10 dark:border-white/10"
-          : "bg-transparent"
+          : "bg-white/80 dark:bg-[#0F1724]/80 backdrop-blur-md shadow-lg border-b border-[#0F1724]/10 dark:border-white/10"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo - MAIOR E RESPONSIVO */}
           <motion.button
             onClick={() => scrollToSection("hero")}
-            className="group"
+            className="group flex items-center"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
             <img
               src={logoLightImage}
               alt="Emanuel Abreu"
-              className="h-10 md:h-12 dark:hidden transition-transform group-hover:scale-105"
+              className="h-14 sm:h-16 md:h-20 w-auto dark:hidden transition-all duration-300 group-hover:scale-105"
             />
             <img
               src={logoDarkImage}
               alt="Emanuel Abreu"
-              className="h-10 md:h-12 hidden dark:block transition-transform group-hover:scale-105"
+              className="h-14 sm:h-16 md:h-20 w-auto hidden dark:block transition-all duration-300 group-hover:scale-105"
             />
           </motion.button>
 
@@ -74,7 +74,7 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-[#0F1724] dark:text-white hover:text-[#17A2B8] dark:hover:text-[#17A2B8] transition-colors relative group"
+                className="text-[#0F1724] dark:text-white hover:text-[#17A2B8] dark:hover:text-[#17A2B8] transition-colors relative group text-base font-medium"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#17A2B8] group-hover:w-full transition-all duration-300" />
@@ -155,7 +155,7 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => scrollToSection(item.id)}
-                    className="text-left text-[#0F1724] dark:text-white hover:text-[#17A2B8] dark:hover:text-[#17A2B8] transition-colors py-2"
+                    className="text-left text-[#0F1724] dark:text-white hover:text-[#17A2B8] dark:hover:text-[#17A2B8] transition-colors py-2 text-base font-medium"
                   >
                     {item.label}
                   </motion.button>

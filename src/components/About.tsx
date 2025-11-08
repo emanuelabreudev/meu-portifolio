@@ -26,7 +26,7 @@ const skills = [
 const experience = [
   {
     icon: Briefcase,
-    title: "Engenheiro de Software Backend",
+    title: "Engenheiro de Software",
     period: "2019 - Presente",
     description:
       "Desenvolvimento de soluções escaláveis em Node.js e Python. Microserviços, APIs REST e infraestrutura cloud.",
@@ -113,9 +113,7 @@ export function About() {
                 <h3 className="mb-2 text-[#0F1724] dark:text-white">
                   Emanuel Abreu
                 </h3>
-                <p className="text-[#17A2B8] mb-6">
-                  Engenheiro de Software Backend
-                </p>
+                <p className="text-[#17A2B8] mb-6">Engenheiro de Software</p>
 
                 {/* Social Links */}
                 <div className="flex justify-center gap-3 mb-6">
